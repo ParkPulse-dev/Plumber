@@ -1,10 +1,7 @@
-<div dir='rtl' lang='he'>
+## Plumber
  
 משחק לימודי עבור אינסטלטורים או שחקנים הרוצים ללמוד יכולות אינסטלציה לשימוש עצמי. השחקן הוא אינסטלטור המקבל קריאות לתיקון תקלות אינסטלציה אשר יש לתקנם, נמדד לפי אמינות, יושר, איכות ומקצועיות. המשחק מיועד למחשב רגיל.
 
-[רכיבים רשמיים](formal-elements.md)
+[Formal elements](formal-elements.md)
 
-https://parkpulse.itch.io/pulmber
-
-
-</div>
+[itch.io](https://parkpulse.itch.io/pulmber)
