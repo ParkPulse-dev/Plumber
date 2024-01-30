@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
 {
-    
+
     private bool isDragging = false;
     private Vector3 offset, vect;
     public GameObject tool1;
     public GameObject problem;
-      void Start()
+    void Start()
     {
-        vect = new Vector3 (5,0,0);
+        vect = new Vector3(5, 0, 0);
         tool1 = GameObject.Find("tool1");
         problem = GameObject.Find("Problem");
     }
@@ -28,9 +28,9 @@ public class DragAndDrop : MonoBehaviour
                 isDragging = false;
             }
         }
-        if(Vector3.Distance(tool1.transform.position,vect) < 3f)
+        if (Vector3.Distance(tool1.transform.position, vect) < 3f)
         {
-              Destroy(problem);
+            Destroy(problem);
         }
     }
 
