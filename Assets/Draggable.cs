@@ -7,11 +7,15 @@ public class DragAndDrop : MonoBehaviour
     private Vector3 offset, vect;
     public GameObject tool1;
     public GameObject problem;
+    float dist;
+    int isMouseButton;
     void Start()
     {
         vect = new Vector3(5, 0, 0);
         tool1 = GameObject.Find("tool1");
         problem = GameObject.Find("Problem");
+        dist = 3f;
+        isMouseButton = 0;
     }
 
     void Update()
@@ -22,13 +26,13 @@ public class DragAndDrop : MonoBehaviour
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = new Vector3(mousePosition.x + offset.x, mousePosition.y + offset.y, transform.position.z);
 
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetMouseButtonUp(isMouseButton))
             {
                 // Stop dragging when mouse button is released
                 isDragging = false;
             }
         }
-        if (Vector3.Distance(tool1.transform.position, vect) < 3f)
+        if (Vector3.Distance(tool1.transform.position, vect) < dist)
         {
             Destroy(problem);
         }
