@@ -10,7 +10,7 @@ public class DragAndDrop : MonoBehaviour
     public float dist = 3f;
     public float objPosX = 5f;
     private int isMouseButton = 0;
-    
+
     void Start()
     {
         objPos = new Vector3(objPosX, 0, 0);
