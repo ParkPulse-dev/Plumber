@@ -4,18 +4,18 @@ public class DragAndDrop : MonoBehaviour
 {
 
     private bool isDragging = false;
-    private Vector3 offset, vect;
+    private Vector3 offset, objPos;
     public GameObject tool1;
     public GameObject problem;
-    float dist;
-    int isMouseButton;
+    public float dist = 3f;
+    public float objPosX = 5f;
+    private int isMouseButton = 0;
+    
     void Start()
     {
-        vect = new Vector3(5, 0, 0);
+        objPos = new Vector3(objPosX, 0, 0);
         tool1 = GameObject.Find("tool1");
         problem = GameObject.Find("Problem");
-        dist = 3f;
-        isMouseButton = 0;
     }
 
     void Update()
@@ -32,7 +32,7 @@ public class DragAndDrop : MonoBehaviour
                 isDragging = false;
             }
         }
-        if (Vector3.Distance(tool1.transform.position, vect) < dist)
+        if (Vector3.Distance(tool1.transform.position, objPos) < dist)
         {
             Destroy(problem);
         }
